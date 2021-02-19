@@ -148,7 +148,7 @@ public class l004_GT{
 
     }
 
-
+    
     public static Node linearize(Node node){
         if(node.childs.size() == 0) return node;
 
