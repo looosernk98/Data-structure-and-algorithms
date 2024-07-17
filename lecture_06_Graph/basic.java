@@ -1,6 +1,10 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.ArrayDeque;
 public class basic{
-int N=9;
-ArrayList<Integer> graph[]= new ArrayList[N];
+ static int N=9;
+static ArrayList<Integer> graph[]= new ArrayList[N];
 
     public static void add(int u, int v){
        graph[u].add(v);
@@ -11,7 +15,7 @@ ArrayList<Integer> graph[]= new ArrayList[N];
 
         for(int e: graph[src]){
             if(!vis[e]){
-                topoDFS(e,vis);
+                topoDFS(e,vis,st);
             }
         }
 
@@ -22,13 +26,13 @@ ArrayList<Integer> graph[]= new ArrayList[N];
         Stack<Integer> st= new Stack<>();
         for(int i=0; i<N; i++){
             if(!vis[i]){
-                topDFS(i,vis,st);
+                topoDFS(i,vis,st);
             }
         }
     } 
 
     // khans algo
-    public static void topological order(){
+    public static void topologicalOrder(){
         int[] indegree= new int[N];
         for(int i=0; i<N; i++) {
             for(int e: graph[i]) indegree[e]++;

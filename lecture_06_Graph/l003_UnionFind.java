@@ -1,5 +1,10 @@
+
+import java.util.Arrays;
+import java.util.ArrayList;
 public class l003_UnionFind{
-     
+    public static void main(String args[]){
+      
+    }
     public static class Edge{
         int v = 0;
         int w = 0;
